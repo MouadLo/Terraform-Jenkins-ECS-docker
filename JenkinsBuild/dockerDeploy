@@ -1,0 +1,5 @@
+
+terraform init
+ssh-keygen -t rsa -N "" -f mykey
+/usr/local/bin/terraform init
+/usr/local/bin/terraform apply -target aws_ecs_service.myapp-service -var MYAPP_SERVICE_ENABLE='1' -var MYAPP_VERSION=${MYAPP_VERSION} -auto-approve
